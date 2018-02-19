@@ -1,14 +1,49 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Formulaire Joueur</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-  </div>
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Formulaire Joueur </title>
+        <link rel ="stylesheet" href="style.css">
+    </head>
+
+<body> 
+    <div class="container">
+    <form method="post">
+        <fieldset>
+        <legend> Informations personnelles </legend>
+        <label for = "prenom" id="label_prenom"> Prénom*</label> 
+        <input type="text" name = "Prénom" id="prenom" placeholder ="Inserer votre prénom ici" required>
+        <label for = "nom" id="label_nom"> Nom* </label>
+        <input type="text" name = "Nom" id="nom" placeholder="Inserer votre nom ici" required/> 
+        <label for = "date_de_naissance" id="label_date"> Date de naissance*</label>
+        <input type="date" name = "date" id="date_de_naissance" required/>
+        </fieldset>
+
+        <label for ="numberPlayer" id="label_number"> Numéro du joueur (compris entre 9 et 99) </label>
+        <input type ="number" name ="numberPlayer" id = "numberPlayer">
+
+        <fieldset>
+            <legend>Listes des postes auxquels je peux évoluer</legend>
+            <div class="block">
+            <input type = "checkbox" name ="defense" id = "Defense"> <label for = "Defense" id="label_defense"> Défenseur</label>
+            </div>
+
+            <div class="block">
+            <input type = "checkbox" name ="mid" id = "Milieu">   <label for = "Milieu" id="label_milieu"> Milieu </label>
+            </div>
+            <div class="block">
+            <input type = "checkbox" name ="attack" id = "Attaque"> <label for = "Attaque" id="label_attaque"> Attaquant </label>
+            </div>
+
+
+            <input type = "button" name="info" id="info" value="Obtenir des informations supplémentaires sur les postes">
+        </fieldset>
+
+        <input type = "submit" name = "envoyer" value = "Envoyer">
+        <span> * = Champs obligatoires</span>
+    </form>
+    </div>
 </body>
 </html>
